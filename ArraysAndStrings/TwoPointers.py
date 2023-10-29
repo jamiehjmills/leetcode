@@ -75,16 +75,6 @@ print(combine([2,5,7], [3,6,8,9]))
 # A subsequence of a string is a sequence of characters that can be obtained by deleting some (or none) of the characters from the original string,
 # while maintaining the relative order of the remaining characters. For example, "ace" is a subsequence of "abcde" while "aec" is not.
 
-# def is_subsequence(x):
-#
-#     try:
-#         x.index("x")
-#     except ValueError:
-#         print("nope")
-#
-#
-# is_subsequence("abcde")
-
 def is_subsequence(x):
 
     left = 0
@@ -103,3 +93,28 @@ def is_subsequence(x):
 
 
 print(is_subsequence("a"))
+
+
+# Given an integer array nums sorted in non-decreasing order,
+# return an array of the squares of each number sorted in non-decreasing order.
+# https://leetcode.com/problems/squares-of-a-sorted-array/
+
+def is_sorted(a):
+    left = 0
+    right = len(a) - 1
+    x = [0] * len(a)
+    i = right
+
+    while i >= 0:
+        if abs(a[left]) > abs(a[right]):
+            x[i] = (a[left]*a[left])
+            left += 1
+        else:
+            x[i] = (a[right]*a[right])
+            right -= 1
+
+        i -= 1
+
+    return x
+
+print(is_sorted([-2,-1,0,2,3]))
