@@ -68,3 +68,38 @@ def combine(arr1, arr2):
 
 print(combine([2,5,7], [3,6,8,9]))
 
+
+# Example 4: 392. Is Subsequence.
+# Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+#
+# A subsequence of a string is a sequence of characters that can be obtained by deleting some (or none) of the characters from the original string,
+# while maintaining the relative order of the remaining characters. For example, "ace" is a subsequence of "abcde" while "aec" is not.
+
+# def is_subsequence(x):
+#
+#     try:
+#         x.index("x")
+#     except ValueError:
+#         print("nope")
+#
+#
+# is_subsequence("abcde")
+
+def is_subsequence(x):
+
+    left = 0
+    right = left+1
+
+    b = "abcde"
+
+    while right < len(x):
+        if b.index(x[left]) < b.index(x[right]):
+            left += 1
+            right += 1
+        elif b.index(x[left]) > b.index(x[right]):
+            return False
+
+    return True
+
+
+print(is_subsequence("a"))
