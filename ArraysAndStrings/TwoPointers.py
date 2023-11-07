@@ -14,7 +14,7 @@ def check_if_palindrome(s):
         left += 1
         right -= 1
 
-#check_if_palindrome("test")
+check_if_palindrome("test")
 
 # Example 2: Given a sorted array of unique integers and a target integer,
 # return true if there exists a pair of numbers that sum to target, false otherwise.
@@ -92,7 +92,7 @@ def is_subsequence(x):
     return True
 
 
-print(is_subsequence("a"))
+#print(is_subsequence("a"))
 
 
 # Given an integer array nums sorted in non-decreasing order,
@@ -117,6 +117,5 @@ def is_sorted(a):
 
     return x
 
-print(is_sorted([-2,-1,0,2,3]))
+#print(is_sorted([-2,-1,0,2,3]))
 
-#test
