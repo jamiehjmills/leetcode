@@ -1,6 +1,8 @@
 # https://www.datacamp.com/tutorial/tutorial-postgresql-python
 import psycopg2
 
+#### ehck for connecting to Trino: https://github.com/trinodb/trino-python-client
+
 ## postgres
 def connection():
     conn = psycopg2.connect(
