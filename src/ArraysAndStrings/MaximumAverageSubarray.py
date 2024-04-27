@@ -12,14 +12,19 @@ def findMaxAverage(nums, k):
     subMax = 0
     max = 0
     count = 0
+    newCount = 0
 
     for index, item in enumerate(nums):
         left = index
+        print("index")
+        print(left)
 
-        while(count < k and left < len(nums)):
-            subMax = subMax + nums[left]
-            left += 1
-            count += 1
+        while(newCount < k and left < len(nums)):
+            newCount = count + left
+            print("newCount")
+            print(newCount)
+            subMax = subMax + nums[newCount]
+            count = count + 1
 
         if max < subMax:
             max = subMax
@@ -31,3 +36,4 @@ def findMaxAverage(nums, k):
 
 print(findMaxAverage(nums, 4))
 
+### TODO: need to make it average
