@@ -17,3 +17,12 @@ Head = {
 
 print(Head['next']['next']['value'])
 
+.google.com
+#sfasdf
+
+
+.ex.com
+www.example2.com
+#test
+
+.two.com
