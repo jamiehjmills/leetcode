@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "running the shell script"
 
-#list=(`git diff -U0 src/Udemy/LinkedList/test.py | grep '^[+-]' | grep -Ev '^(--- a/|\+\+\+ b/)'`)
+#list=(`git diff -U0 src/Udemy/LinkedList/time.py | grep '^[+-]' | grep -Ev '^(--- a/|\+\+\+ b/)'`)
 list=(`git diff -U0 origin/master HEAD src/Udemy/LinkedList/test.py | grep '^[+-]' | grep -Ev '^(--- a/|\+\+\+ b/)'`)
 length=${#list[@]}
 #echo ${length}
