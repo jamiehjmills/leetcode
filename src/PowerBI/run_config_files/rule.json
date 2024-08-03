@@ -1,0 +1,23 @@
+[
+    {
+        "name": "AlgoParams.RunTaker",
+        "value": true,
+        "type": "bool"
+    },
+    {
+        "name": "AlgoParams.RunMaker",
+        "value": true,
+        "type": "bool"
+    },
+    {
+        "name": "ChargeParams.FixChargeMultiplier",
+        "value": 0.45
+    },
+    {
+        "name": "ChargeParams.SizeChargeMultiplier",
+        "value": 5.0,
+        "editable": true,
+        "low": 3,
+        "high": 10
+    }
+]
