@@ -24,14 +24,22 @@ rule_data=load_json_data(run_config_files['rule'])
 #print(layout_data)
 #print(rule_data)
 
+found = False
+selected_rule = ""
 data_for_rendering = []
 for layout in layout_data:
     #print(layout["name"])
     for rule in rule_data:
         if rule["name"] == layout["name"]:
-            data_for_rendering.append(rule)
-        else:
-            data_for_rendering.append(layout)
+            found = True
+            selected_rule=rule
+            continue
+
+    if found:
+        data_for_rendering.append(selected_rule)
+        found = False
+    else:
+        data_for_rendering.append(layout)
 
 
 #print(data_for_rendering)
